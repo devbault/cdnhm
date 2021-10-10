@@ -1,0 +1,71 @@
+body::-webkit-scrollbar {
+  width: 1px;
+}
+
+body::-webkit-scrollbar-track {
+  background-color: var(--bs-dark);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #ff2e00;
+}
+
+/* ! * ScrollToTop v2.0 * Copyright 2019 zkreations * Daniel Abel M. (fb.com/danieI.abel) * Licensed under MIT (github.com/zkreations/plugins/blob/master/LICENSE) */
+
+/* ! Core (No modificar) {{ */
+
+.scrollToTop {
+  outline: none;
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.scrollToTop svg {
+  display: block;
+}
+
+.scrollToTop {
+  position: fixed;
+  z-index: 9999;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .3s, background .3s, -webkit-transform .3s;
+  transition: transform .3s, opacity .3s, background .3s;
+  transition: transform .3s, opacity .3s, background .3s, -webkit-transform .3s;
+  -webkit-transform: translateY(-2em);
+  transform: translateY(-2em);
+}
+
+.scrollToTop.visible {
+  pointer-events: all;
+  opacity: 1;
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+}
+
+/* }} Fin del core {{ */
+
+/* ! Personalización */
+
+/* Icono----------------------------------------- */
+
+.scrollToTop svg {
+  fill: #FFFFFF;
+}
+
+/* Boton----------------------------------------- */
+
+.scrollToTop {
+  background-color: #252525;
+  box-shadow: 0 1px 4px rgba(0,0,0,.5);
+  bottom: 1em;
+  right: 1em;
+  padding: .5em;
+  border-radius: 4px;
+}
+
+.scrollToTop:hover {
+  background-color: #020202;
+}
+
